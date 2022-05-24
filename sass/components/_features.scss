@@ -1,0 +1,85 @@
+/* Features page*/
+.features__headline,
+.perfomance__headline,
+.team__headline,
+.clients__headline {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $text-color;
+@media screen and (max-wight: 768px) {
+    font-size: 28px;
+    line-height: 1.18;
+}
+@media screen and (min-wight: 769px) {
+    font-size: 36px;
+    line-height: 1.17;
+}
+}
+.features__headline {
+    display: none;
+    color: $primery-bg-color;
+}
+.features__icon,
+.features__title,
+.features__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.features__block {
+    margin: 15px; 
+@media screen and (max-width: 767px) {
+    height: 226px;
+    width: 450px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 226px;
+    width: 354px;
+}
+
+@media screen and (min-width: 1200px) {
+    height: 251px;
+    width: 270px;
+}
+}
+.features__icon {
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+}
+
+.features__title,
+.feedback-act__title,
+.perfomance__title {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.features__title {
+    margin-bottom: 10px;
+    color: $text-color;
+}
+
+.features__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}

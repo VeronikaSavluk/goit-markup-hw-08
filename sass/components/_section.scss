@@ -1,0 +1,18 @@
+.section {
+@media screen and (max-width: 768px){
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@media screen and (min-width: 769px) {    
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+    &:nth-child(3) {
+    padding-top: 0;
+}
+.main-studio &:first-child {
+    padding: 188px 0;
+@media screen and (min-width: 769px) {
+    padding: 200px 0;
+}}
+}

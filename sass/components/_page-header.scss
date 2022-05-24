@@ -1,0 +1,249 @@
+/*Header-page*/
+header.page-header {
+    border-bottom: 1px solid #ECECEC;
+}
+.main-nav {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+@media screen and (min-width: 768px) {
+    justify-content: flex-end;
+    height: 80px;
+}
+}
+.logo {    
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+@media screen and (max-width: 768px) {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 24px;
+    line-height: 1.17;
+}
+@media screen and (min-width: 769px) {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: auto;
+}}
+.header-menu__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;  
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 2;    
+@media screen and (min-width: 768px) {
+    display: none;
+}
+}
+.header-menu__button .header-menu__icon-cross {
+    display: none;
+}
+.header-menu__button.is-open .header-menu__icon-cross {
+    display: block;
+}
+.header-menu__button.is-open .header-menu__icon-menu {
+    display: none;
+}
+.header-menu__button.is-open:hover .header-menu__icon-cross,
+.header-menu__button.is-open:focus .header-menu__icon-cross {
+    fill: $accent-color;
+}
+.header-menu__button.is-open:hover .header-menu__icon-menu,
+.header-menu__button.is-open:focus .header-menu__icon-menu {
+    fill: #000000;
+}
+.header-menu__button:hover .header-menu__icon-menu,
+.header-menu__button:focus .header-menu__icon-menu {
+    fill: $accent-color;
+}
+.header-menu__button:hover .header-menu__icon-cross,
+.header-menu__button:focus .header-menu__icon-cross {
+    fill: #212121;
+}
+
+.header-menu__container {
+    position: relative;
+    display: flex;
+    background-color: $primery-bg-color;
+@media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 48px 40px;
+    &.is-open {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+}
+@media screen and (min-width: 768px){
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+/* Navigation */
+
+nav.header-navigation {
+@media screen and (min-width: 768px) {
+    margin-top: 32px;
+    margin-right: 88px;
+@media screen and (min-width: 1200px) {
+    margin-right: 305px;
+}}}
+@media screen and (max-width: 767px) {
+.header-navigation {
+    margin-bottom: 307px;
+}}
+
+@media screen and (min-width: 768px) {
+.header-navigation__items,
+.header-contacts {
+    display: flex;
+    align-items: center;
+    }
+.header-navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+.header-navigation__items {
+    margin-right: auto;
+}
+}
+
+.header-navigation__link,
+.header-contact__link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color $tr-duration $tr-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &:hover .link,
+    &:focus .link {
+        color: currentColor;
+    }
+}
+
+.header-navigation__link {
+    display: flex;
+    padding-bottom: 32px;
+    @media screen and (max-width: 767px) {
+        font-size: 40px;
+        line-height: 1.18;
+    }
+
+    @media screenand and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+.header-navigation__items .link {
+    color: $text-color;
+}
+
+@media screen and (min-width: 768px) {
+.link.header-navigation__link--current {
+        color: $accent-color;
+    }
+.header-navigation__link {
+    position: relative;
+}
+.header-navigation__link--current::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        bottom: 0;
+        border-radius: 2px;
+        background-color: $accent-color;
+    }
+}
+/*Header contacts*/
+.header-contacts {
+    display: flex;
+@media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    margin-top: 21px;
+}
+@media screen and (min-width: 1200px) {
+    margin-top: 32px;
+}}
+@media screen and (min-width: 1200px) {
+.header-contact:not(:last-child) {
+    margin-right: 30px;
+}}
+@media screen and (max-width: 767px) {
+.header-contact__link {
+   padding-bottom: 32px;
+}
+.header-contact:last-child .header-contact__link {
+    font-size: 34px;
+    line-height: 1.18;
+    color: $accent-color;
+}
+.header-contact:first-child .header-contact__link {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 0;
+}
+}
+.header-contact__link {
+    display: flex;
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    padding-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+}}
+.header-contact__icon {  
+@media screen and (max-width: 767px) {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    display: block;
+    fill: currentColor;
+    margin-right: 8px;
+@media screen and (min-width: 1200px) {
+    margin-right: 10px;
+}}}
+.header-accounts {
+    display: flex;
+}
+.header-account__link {
+    display: none;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+&:last-child {
+    margin-right: 20px;
+}
+@media screen and (max-width: 767px) {
+    display: block;
+}
+}
