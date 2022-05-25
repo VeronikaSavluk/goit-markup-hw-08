@@ -71,11 +71,13 @@ img {
   padding-top: 0;
 }
 
-.main-studio .section:first-child {
-  padding: 188px 0;
+@media screen and (max-width: 1199px) {
+  .main-studio .section:first-child {
+    padding: 188px 0;
+  }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .main-studio .section:first-child {
     padding: 200px 0;
   }
@@ -129,12 +131,17 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../../images/hero/hero480.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url("./../../images/hero/hero480.jpg");
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .overlay .overlay {
+@media screen and (max-width: 480px) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../../images/hero/hero480.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url("./../../images/hero/hero480.jpg");
+  }
+}
+
+@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
+  .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../../images/hero/hero480@2x.jpg");
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url("./../../images/hero/hero480@2x.jpg");
   }
@@ -597,26 +604,27 @@ img {
 
 @media screen and (max-width: 767px) {
   .features__block {
-    height: 226px;
     width: 450px;
+    height: 226px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .features__block {
-    height: 226px;
     width: 354px;
+    height: 251px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .features__block {
-    height: 251px;
     width: 270px;
+    height: 251px;
   }
 }
 
 .features__icon {
+  height: 120px;
   margin-bottom: 30px;
   background-color: #F5F4FA;
 }
@@ -629,6 +637,7 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -706,8 +715,8 @@ img {
 
 @media screen and (max-width: 767px) {
   .team-member {
-    -ms-flex-preferred-size: calc(100vw-30px);
-        flex-basis: calc(100vw-30px);
+    -ms-flex-preferred-size: calc(100%-30px);
+        flex-basis: calc(100%-30px);
   }
 }
 
@@ -947,6 +956,7 @@ img {
 
 .project__item {
   margin: 15px;
+  height: 404px;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -959,23 +969,20 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .project__item:hover .description__text--cover {
-    -ms-flex-preferred-size: calc(100vw-32px);
-        flex-basis: calc(100vw-32px);
+  .project__item {
+    width: 450px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .project__item:hover .description__text--cover {
-    -ms-flex-preferred-size: calc((100%-4*15px)/2);
-        flex-basis: calc((100%-4*15px)/2);
+  .project__item {
+    width: 354px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .project__item:hover .description__text--cover {
-    -ms-flex-preferred-size: calc((100%-8*15px)/3);
-        flex-basis: calc((100%-8*15px)/3);
+  .project__item {
+    width: 370px;
   }
 }
 
@@ -989,13 +996,6 @@ img {
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: none;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .project__description {
-    max-width: 354px;
-    max-height: 440px;
-  }
 }
 
 .project__description--cover {
@@ -1388,6 +1388,9 @@ header.page-header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-top: 21px;
   }
 }

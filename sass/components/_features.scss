@@ -42,24 +42,26 @@
 .features__block {
     margin: 15px; 
 @media screen and (max-width: 767px) {
-    height: 226px;
     width: 450px;
+    height: 226px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-    height: 226px;
     width: 354px;
+    height: 251px;
 }
 
 @media screen and (min-width: 1200px) {
-    height: 251px;
     width: 270px;
+    height: 251px;
 }
 }
 .features__icon {
+    height: 120px; 
     margin-bottom: 30px;
     background-color: #F5F4FA;
 }
+
 
 .features__title,
 .feedback-act__title,
@@ -69,6 +71,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 

@@ -11,8 +11,9 @@
     padding-top: 0;
 }
 .main-studio &:first-child {
-    padding: 188px 0;
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 1199px) {
+    padding: 188px 0;}
+@media screen and (min-width: 1200px) {
     padding: 200px 0;
 }}
 }
